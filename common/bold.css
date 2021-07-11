@@ -1,0 +1,11 @@
+@font-face {
+	 font-family: 'bold'; 
+	 font-weight: normal; 
+	 font-style: normal; 
+	 src: url("~@/static/PingFang Bold.ttf") format("truetype"); 
+}
+.bold{
+	font-family: 'bold';
+	font-size: 28rpx;
+	font-size: normal;
+}

@@ -1,0 +1,12 @@
+@font-face {
+	 font-family: 'heavy'; 
+	 font-weight: normal; 
+	 font-style: normal; 
+	 src: url("~@/static/PingFang Heavy.ttf") format("truetype"); 
+}
+
+.heavy{
+	font-family: 'heavy';
+	font-size: 28rpx;
+	font-size: normal;
+}

@@ -1,0 +1,11 @@
+@font-face {
+	 font-family: 'medium'; 
+	 font-weight: normal; 
+	 font-style: normal; 
+	 src: url("~@/static/PingFang Medium.ttf") format("truetype"); 
+}
+.medium{
+	font-family: 'medium';
+	font-size: 28rpx;
+	font-size: normal;
+}

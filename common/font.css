@@ -1,0 +1,13 @@
+@font-face {
+	 font-family: 'regular'; 
+	 font-weight: normal; 
+	 font-style: normal; 
+	 src: url("~@/static/PingFang Regular.ttf") format("truetype"); 
+}
+
+.regular{
+	font-family: 'regular';
+	font-size: 28rpx;
+	font-size: normal;
+}
+
