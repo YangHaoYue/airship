@@ -1,16 +1,14 @@
 <template>
 	<view class="content" :style="'min-height:' + this.$u.sys().windowHeight+'px;'">
 		<view class="u-text-center heavy" style="margin-top: 58rpx;font-size: 55rpx;">恭喜您！</view>
-		<view class="u-text-center bold" style="margin-top: 42rpx;line-height: 1.7;font-size: 40rpx;">获得Payoneer派安盈25美金</view>
-		<view class="u-text-center bold" style="line-height: 1.7;font-size: 40rpx;">优惠注册奖励</view>
+		<view class="u-text-center bold" style="margin-top: 42rpx;line-height: 1.7;font-size: 40rpx;">获得25美金优惠注册奖励</view>
 		
-		<view class="u-text-center medium" style="line-height: 1.7;font-size: 30rpx;margin-top: 32rpx;">点击下方“立即领取”</view>
+		<view class="u-text-center medium" style="line-height: 1.7;font-size: 40rpx;margin-top: 32rpx;">点击下方“立即领取”</view>
+		<view class="u-text-center medium" style="line-height: 1.7;font-size: 40rpx;">填写个人资料后</view>
+		<view class="u-text-center medium" style="line-height: 1.7;font-size: 40rpx;">即可获得优惠注册专属链接</view>
 		
-		<view class="u-text-center bold" style="line-height: 1.7;font-size: 40rpx;margin-top: 140rpx;">填写个人资料后</view>
-		<view class="u-text-center bold" style="line-height: 1.7;font-size: 40rpx;">即可获得优惠注册专属链接</view>
-		
-		<view class="u-text-center regular" style="line-height: 1.7;font-size: 30rpx;margin-top: 57rpx;color: #FFA800;">分享H5更有机会赢取价值160元</view>
-		<view class="u-text-center regular" style="line-height: 1.7;font-size: 30rpx;color: #FFA800;margin-bottom: auto;">“跨境宇宙”礼品</view>
+		<view class="u-text-center regular" style="line-height: 1.7;font-size: 35rpx;margin-top: 57rpx;">分享H5更有机会赢取价值160元</view>
+		<view class="u-text-center regular" style="line-height: 1.7;font-size: 35rpx;margin-bottom: auto;">的小米车充或移动移动硬盘</view>
 		
 		<view class="u-flex u-row-between btn_gromp">
 			<view class="btn1 medium u-flex u-row-center" @click="toform()">立即领取</view>

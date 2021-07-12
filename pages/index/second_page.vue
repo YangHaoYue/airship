@@ -4,19 +4,19 @@
 			<image class="logo" src="../../static/Last_page_bg.png" mode="aspectFit"></image>
 		</view>
 		<view class="content_center">
-			<view class="heavy" style="font-size: 35rpx;line-height: 1;">恭喜您！</view>
-			<view class="heavy" style="font-size: 35rpx;line-height: 1.5;">已成功提交抽奖信息</view>
-			<view class="heavy" style="font-size: 35rpx;line-height: 1.5;">密切关注Payoneer派安盈微信公众号，</view>
-			<view class="heavy" style="font-size: 35rpx;line-height: 1.5;">第一时间获取得奖信息哦！</view>
+			<view class="heavy" style="font-size: 35rpx;line-height: 1;">您已成功提交抽奖信息</view>
+			<view class="heavy u-text-center" style="font-size: 35rpx;line-height: 1.5;">请您关注Payoneer微信公众号，第一时间获取得奖信息</view>
+			<!-- <view class="heavy" style="font-size: 35rpx;line-height: 1.5;">密切关注Payoneer派安盈微信公众号，</view>
+			<view class="heavy" style="font-size: 35rpx;line-height: 1.5;">第一时间获取得奖信息哦！</view> -->
 			
 			<view class="bold" style="font-size: 30rpx;line-height: 1.5;margin-top: 43rpx;">复制下方链接，即可获得</view>
 			<view class="bold" style="font-size: 30rpx;line-height: 1.5;">Payoneer派安盈25美金优惠奖励</view>
-			<view class="bold u-line-4 u-text-center" style="font-size: 30rpx;line-height: 1.5;margin-top: 30rpx;">https://register.payoneer.com.cn/fund-security/?utm_source=Baidu&utm_medium=search&utm_campaign=brandzone&utm_content=title</view>
+			<view class="bold u-line-5 u-text-center" style="font-size: 30rpx;line-height: 1.5;margin-top: 30rpx;">{{data}}</view>
 			
 			<u-button class="u-m-t-30" type="warning" size="mini" @click="copy">点击复制</u-button>
 			
-			<view class="bold" style="font-size: 30rpx;margin-top: 58rpx;line-height: 1.3;">返回H5点击保存图片分享，</view>
-			<view class="bold" style="font-size: 30rpx;line-height: 1.3;margin-top: 20rpx;">更有机会赢取丰厚大礼</view>
+			<view class="bold" style="font-size: 30rpx;margin-top: 58rpx;line-height: 1.3;">返回H5点击“分享赢取大礼” ，</view>
+			<view class="bold" style="font-size: 30rpx;line-height: 1.3;margin-top: 20rpx;">更有机会赢取更多礼品并提高中奖几率哦。</view>
 			
 			<!-- <view class="u-flex u-row-center">
 				<image src="../../static/anniu_bg@2x.png" mode="aspectFit" style="width: 311rpx;height: 311rpx;margin: 33rpx auto;"></image>
@@ -34,7 +34,7 @@
 			return {
 				show:false,
 				inviter_id:'',
-				data:''
+				data:'https://payouts.payoneer.com/partners/or.aspx?pid=YOYIZC74IO2s4KZQp7tgsw%3d%3d&locale=zh-CN&rcid=300792&utm_source=wechat&utm_medium=social-media&utm_campaign=rocket-game-campaign',
 			}
 		},
 		onLoad() {
@@ -43,7 +43,7 @@
 		methods: {
 			// 触发方法
 			 copy() {
-				   let content = 'https://register.payoneer.com.cn/fund-security/?utm_source=Baidu&utm_medium=search&utm_campaign=brandzone&utm_content=title' // 复制内容，必须字符串，数字需要转换为字符串
+				   let content = this.data // 复制内容，必须字符串，数字需要转换为字符串
 				   const result = h5Copy(content)
 				   if (result === false) {
 					 uni.showToast({

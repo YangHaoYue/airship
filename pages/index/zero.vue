@@ -9,9 +9,9 @@
 				</view>
 			</tui-round-progress>
 			<view class="u-text-center heavy" style="margin-top: 58rpx;font-size: 45rpx;">很遗憾，您未能点亮能量环！</view>
-			<view class=" medium" style="margin-top: 42rpx;line-height: 1.7;font-size: 35rpx;">没关系，跨境的征途永远不是一帆丰顺,让Payoneer派安盈陪伴您在跨境的宇宙</view>
-			<view class="u-text-center medium" style="line-height: 1.7;font-size: 35rpx;">解锁宝藏吧！</view>
-			<view class="u-text-center heavy" style="margin: 116rpx auto 41rpx auto;font-size: 45rpx;">{{shipName}}</view>
+			<view class=" medium u-text-center" style="margin-top: 42rpx;line-height: 1.7;font-size: 35rpx;margin-bottom: auto;">没关系，跨境的征途不是永远一帆风顺的，让Payoneer陪您在跨境的宇宙解锁宝藏吧</view>
+			<!-- <view class="u-text-center medium" style="line-height: 1.7;font-size: 35rpx;">解锁宝藏吧！</view> -->
+			<!-- <view class="u-text-center heavy" style="margin: 116rpx auto 41rpx auto;font-size: 45rpx;">{{shipName}}</view> -->
 			<view class="btn_colorful u-flex u-row-center medium" @click="play()">起飞试试！</view>
 		</block>
 		<gal-css-animate v-else class="ship" animateName="bounceOutUp" duration="2s" timingFunction="ease-in" :autoPlay="false" ref="roket">

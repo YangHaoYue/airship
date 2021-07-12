@@ -10,9 +10,9 @@
 				</view>
 			</tui-round-progress>
 			<view class="u-text-center heavy" style="margin-top: 58rpx;font-size: 45rpx;">您已点亮了<text style="font-size: 60rpx;color: #FFD800;margin: 0 15rpx;">{{count*20}}%</text>能量环！</view>
-			<view class="u-text-center medium" style="margin-top: 42rpx;line-height: 1.7;font-size: 35rpx;">立刻点击起飞按钮，飞跃跨境宇宙，解锁你的跨境宝藏！</view>
-			<view class="u-text-center heavy" style="margin: 116rpx auto 41rpx auto;font-size: 45rpx;">{{shipName}}</view>
-			<view class="btn_colorful u-flex u-row-center medium" @click="play()">起飞试试！</view>
+			<view class="u-text-center medium" style="margin-top: 42rpx;line-height: 1.7;font-size: 35rpx;margin-bottom: auto;">点击“起飞”，即刻解锁跨境宝藏！</view>
+			<!-- <view class="u-text-center heavy" style="margin: 116rpx auto 41rpx auto;font-size: 45rpx;">{{shipName}}</view> -->
+			<view class="btn_colorful u-flex u-row-center medium" @click="play()">起飞</view>
 		</block>
 		<gal-css-animate v-else class="ship" animateName="bounceOutUp" duration="2s" timingFunction="ease-in" :autoPlay="false" ref="roket">
 			<image src="../../static/feichuan@2x.png" mode="aspectFit"></image>

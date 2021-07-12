@@ -2,7 +2,10 @@
  * 常用方法封装 请求，文件上传等
  * @author echo. 
  **/
-
+/*
+	http://payoneer.0831.run
+	http://feichuan.yidaoit.com
+ */
 const tui = {
 	//接口地址
 	interfaceUrl: function() {

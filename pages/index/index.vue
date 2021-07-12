@@ -5,13 +5,15 @@
 			<view class="u-font-30 text-white regular" @click="show = true">活动规则</view>
 		</view>
 		<view class="content_center">
-			<view class="text-white heavy" style="font-size: 98rpx;line-height: 1;">遨游跨境宇宙</view>
-			<view class="text-white bold" style="font-size: 58rpx;margin-top: 31rpx;">连接你与世界的机会</view>
-			<view class="text-blue regular" style="font-size: 35rpx;margin-top: 30rpx;">你好跨境人！<text class="bold">100%有奖</text></view>
-			<view class="text-blue regular" style="font-size: 35rpx;margin-top: 17rpx;">即可获得跨境宝藏！</view>
-			<view class="text-white regular" style="font-size: 30rpx;margin-top: 34rpx;">开启跨境宇宙间的壮丽飞行吧！</view>
+			<view class="text-white heavy" style="font-size: 84rpx;line-height: 1;">遨游吧，跨境人</view>
+			<view class="text-white bold" style="font-size: 58rpx;margin-top: 31rpx;line-height: 1.5;">限时活动进行中...</view>			
+			<view class="text-blue regular" style="font-size: 35rpx;margin-top: 30rpx;">答题解锁跨境宝藏</view>
+			<view class="text-blue regular" style="font-size: 35rpx;margin-top: 17rpx;">答对越多，礼品越多</view>
+			
+			<view class="text-white regular" style="font-size: 30rpx;margin-top: 34rpx;">立即开启跨境宇宙间的壮丽飞行吧！</view>
+			<!-- <view class="text-white regular" style="font-size: 30rpx;line-height: 1.8;">世界的每个机会，你都有机会</view> -->
 		</view>
-		<navigator open-type="redirect" url="chooseAirship" class="btn u-flex u-row-center bold">起航</navigator>
+		<navigator open-type="redirect" url="firstQ" class="btn u-flex u-row-center bold">开始答题</navigator>
 		
 		<u-popup v-model="show" mode="center" border-radius="24" width="652" height="1076">
 			<view class="popup">
@@ -29,7 +31,7 @@
 			</view>
 		</u-popup>
 		
-		<gal-sloading ref="sloading" background="rgba(255,255,255,1)"></gal-sloading>
+		<!-- <gal-sloading ref="sloading" background="rgba(255,255,255,1)"></gal-sloading> -->
 	</view>
 </template>
 
@@ -48,7 +50,7 @@
 			let has_answer = this.GetQueryString('has_answer');
 			let right_count = this.GetQueryString('right_count');
 			if(code == null){
-				this.getOpenid();
+				/* this.getOpenid(); */
 			}else if(has_answer == 1){
 				if(right_count == 4||right_count == 5){
 					uni.redirectTo({url: 'ten_next'});
@@ -62,9 +64,10 @@
 			}
 		},
 		onReady() {
-			setTimeout(()=>{
+			/* setTimeout(()=>{
 				this.$refs.sloading.stop();
-			}, 3000);
+				this.show = true;
+			}, 1000); */
 		},
 		data() {
 			return {

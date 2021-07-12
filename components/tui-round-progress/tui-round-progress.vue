@@ -98,7 +98,26 @@
 		    gradient.addColorStop(0, this.format(res.progresscolor));
 			let gradualColor=this.format(res.gradualcolor)
 		    if (gradualColor) {
-		      gradient.addColorStop('1', gradualColor);
+				/* gradient.addColorStop(0,"#C9D438");
+				gradient.addColorStop("0.128","#7FD64C");
+				gradient.addColorStop("0.257","#46B2C0");
+				gradient.addColorStop("0.385","#3890F2");
+				gradient.addColorStop("0.514","#9F67E2");
+				gradient.addColorStop("0.642","#F0534F");
+				gradient.addColorStop("0.771","#F84D1F");
+				gradient.addColorStop("0.899","#F65F22");
+				gradient.addColorStop(1,"#E1A930"); */
+				
+				gradient.addColorStop(0,"#E1A930");
+				gradient.addColorStop("0.128","#F65F22");
+				gradient.addColorStop("0.257","#F84D1F");
+				gradient.addColorStop("0.385","#F0534F");
+				gradient.addColorStop("0.514","#9F67E2");
+				gradient.addColorStop("0.642","#3890F2");
+				gradient.addColorStop("0.771","#46B2C0");
+				gradient.addColorStop("0.899","#7FD64C");
+				gradient.addColorStop(1,"#C9D438");
+		      /* gradient.addColorStop('1', gradualColor); */
 		    }
 		    let requestId = null
 		    let renderLoop = () => {

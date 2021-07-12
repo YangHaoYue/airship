@@ -9,21 +9,21 @@
 					<text class="u-m-r-30">A</text>
 					<text :class="current === 1?'':'text-gray'" style="font-size: 30rpx;">大卖爆单号</text>
 				</view>
-				<view class="circle u-m-r-36"></view>
+				<view class="circle u-m-r-36" :class="current === 1?'color':''"></view>
 			</view>
 			<view class="card u-flex u-row-between u-col-center" :class="current == 2?'_selected':'nomal'" @click="change(2)">
 				<view class="u-font-40 u-m-l-35 u-flex">
 					<text class="u-m-r-30">B</text>
 					<text  :class="current === 2?'':'text-gray'" style="font-size: 30rpx;">派安盈号</text>
 				</view>
-				<view class="circle u-m-r-36"></view>
+				<view class="circle u-m-r-36" :class="current === 2?'color':''"></view>
 			</view>
 			<view class="card u-flex u-row-between u-col-center" :class="current == 3?'_selected':'nomal'" @click="change(3)">
 				<view class="u-font-40 u-m-l-35 u-flex u-flex-1">
 					<text class="u-m-r-30">C</text>
 					<u-input placeholder="请输入您飞船的名字" v-model="shipName" :clearable="false" @focus="change(3)"></u-input>
 				</view>
-				<view class="circle u-m-r-36 u-m-l-20"></view>
+				<view class="circle u-m-r-36" :class="current === 3?'color':''"></view>
 			</view>
 		</view>
 		<view class="btn u-flex u-row-center bold" @click="submit">就它了</view>
@@ -103,6 +103,9 @@
 		height: 43rpx;
 		border-radius: 100%;
 		background-color: #FFFFFF;
+	}
+	.color{
+		background: -webkit-linear-gradient(left,#FF331B,#ECC400);
 	}
 	.btn{
 		border-radius: 5000rpx;
