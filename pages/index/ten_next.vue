@@ -1,7 +1,8 @@
 <template>
 	<view class="content" :style="'min-height:' + this.$u.sys().windowHeight+'px;'">
 		<view class="u-text-center heavy" style="margin-top: 58rpx;font-size: 55rpx;">恭喜您！</view>
-		<view class="u-text-center bold" style="margin-top: 42rpx;line-height: 1.7;font-size: 40rpx;">获得25美金优惠注册奖励 以及 一等奖抽奖名额</view>
+		<view class="u-text-center bold" style="margin-top: 42rpx;line-height: 1.7;font-size: 40rpx;">获得25美金优惠注册奖励 以及 </view>
+		<view class="u-text-center bold" style="line-height: 1.7;font-size: 40rpx;">一等奖抽奖名额</view>
 		
 		<view class="u-text-center medium" style="line-height: 1.7;font-size: 30rpx;margin-top: 32rpx;">点击“立即领取”</view>
 		<view class="u-text-center medium" style="line-height: 1.7;font-size: 30rpx;">填写资料并参与抽奖</view>

@@ -8,7 +8,7 @@
 		<view class="u-text-center medium" style="line-height: 1.7;font-size: 40rpx;">即可获得优惠注册专属链接</view>
 		
 		<view class="u-text-center regular" style="line-height: 1.7;font-size: 35rpx;margin-top: 57rpx;">分享H5更有机会赢取价值160元</view>
-		<view class="u-text-center regular" style="line-height: 1.7;font-size: 35rpx;margin-bottom: auto;">的小米车充或移动移动硬盘</view>
+		<view class="u-text-center regular" style="line-height: 1.7;font-size: 35rpx;margin-bottom: auto;">的小米车充或移动硬盘</view>
 		
 		<view class="u-flex u-row-between btn_gromp">
 			<view class="btn1 medium u-flex u-row-center" @click="toform()">立即领取</view>

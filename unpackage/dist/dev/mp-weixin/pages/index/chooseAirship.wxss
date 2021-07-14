@@ -1,0 +1,65 @@
+@charset "UTF-8";
+/**
+ * 下方引入的为uView UI的集成样式文件，为scss预处理器，其中包含了一些"u-"开头的自定义变量
+ * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
+ */
+.content.data-v-70bd2609 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  /* align-items: center; */
+  padding: 161rpx 84rpx 76rpx 85rpx;
+  background-image: url(/static/bg05_2.gif);
+  background-size: 100% 100%;
+}
+.title.data-v-70bd2609 {
+  font-size: 47rpx;
+  color: #FFFFFF;
+  margin: 0 14rpx 0 9rpx;
+}
+.card.data-v-70bd2609 {
+  width: 581rpx;
+  height: 100rpx;
+  border-radius: 12rpx;
+  margin-bottom: 37rpx;
+}
+._selected.data-v-70bd2609 {
+  background-color: #0086FF;
+  color: #FFFFFF;
+}
+._selected.data-v-70bd2609 input {
+  color: #FFFFFF;
+}
+.nomal.data-v-70bd2609 {
+  background-color: #FFFFFF;
+  color: #333333;
+}
+.center.data-v-70bd2609 {
+  margin: 98rpx auto auto;
+}
+.text-gray.data-v-70bd2609 {
+  color: #666666;
+}
+.circle.data-v-70bd2609 {
+  width: 43rpx;
+  height: 43rpx;
+  border-radius: 100%;
+  background-color: #FFFFFF;
+}
+.color.data-v-70bd2609 {
+  background: -webkit-linear-gradient(left, #FF331B, #ECC400);
+}
+.btn.data-v-70bd2609 {
+  border-radius: 5000rpx;
+  width: 411.3rpx;
+  height: 112.5rpx;
+  background-color: #FF4900;
+  color: #FFFFFF;
+  font-size: 35rpx;
+  margin: 0 auto;
+}
+

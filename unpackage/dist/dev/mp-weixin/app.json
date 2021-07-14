@@ -1,0 +1,28 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/center/index",
+    "pages/index/chooseAirship",
+    "pages/index/firstQ",
+    "pages/index/zero",
+    "pages/index/six",
+    "pages/index/ten",
+    "pages/index/zero_next",
+    "pages/index/six_next",
+    "pages/index/ten_next",
+    "pages/index/form",
+    "pages/index/last_page",
+    "pages/index/second_page"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uView",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8",
+    "navigationStyle": "custom"
+  },
+  "usingComponents": {
+    "tui-round-progress": "/components/tui-round-progress/tui-round-progress"
+  }
+}

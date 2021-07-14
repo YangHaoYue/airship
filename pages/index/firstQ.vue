@@ -4,9 +4,9 @@
 			{{questionList[current].title.case1}}
 			<view>{{questionList[current].title.case2}}</view>
 		</view> -->
-		<!-- <view class="bold" style="color: #FFFFFF;">
-			第{{'1'}}题/共五题
-		</view> -->
+		<view class="bold head_title">
+			第{{current+1}}题/共5题
+		</view>
 		<view class="title bold" style="font-weight: bold;">
 			Q{{current+1}}   {{questionList[current].quest}}<text class="regular" v-if="current == 2">（左右滑动查看）</text>
 		</view>
@@ -59,12 +59,18 @@
 				</view>
 				<view class="u-m-t-28 bold u-text-center" style="font-size: 35rpx;color: #000000;">{{questionList[current].modal.title}}</view>
 				<view :style="current == 4?'margin:36rpx 53rpx 0rpx 52rpx;':'margin:49rpx 53rpx 0rpx 52rpx;'">
-					<image v-if="current == 4" src="../../static/Q5.png" mode="aspectFit" style="width: 521rpx;height: 400rpx;margin: 0 21rpx 32rpx 12rpx;"></image>
+					<image v-if="current == 4" src="../../static/Q5.png" mode="aspectFit" style="width: 521rpx;height: 400rpx;margin: 0 21rpx 0rpx 12rpx;"></image>
 					<view class="u-font-30 regular text-gray" style="line-height: 1.5;">
 						{{questionList[current].modal.case1}}
 					</view>
 					<view class="u-font-30 u-m-t-40 regular text-gray" style="line-height: 1.5;">
 						{{questionList[current].modal.case2}}
+					</view>
+					<view class="u-font-30 u-m-t-40 regular text-gray" style="line-height: 1.5;">
+						{{questionList[current].modal.case3||''}}
+					</view>
+					<view class="u-font-30 u-m-t-40 regular text-gray" style="line-height: 1.5;">
+						{{questionList[current].modal.case4||''}}
 					</view>
 				</view>
 			</view>
@@ -108,7 +114,7 @@
 						modal:{
 							title:'商家在账本上用黑色笔记账',
 							case1:'十一月前，商家账簿上都是红色的赤字，年终购物季开始，赤字变黑，商家开始盈利，黑五的“黑”是繁荣盈利的意思。',
-							case2:'其实不仅是黑五，一年当中不同时段、不同平台都充满机遇，Payoneer橄榄枝计划，助力商家入驻全球30+个高速增长的平台，让您的跨境业务全年段、多市场扩展。',
+							case2:'其实不仅是黑五,一年当中不同时段、不同平台都充满机遇,Payoneer橄榄枝计划,助力商家入驻全球30+个高速增长平台,让您的跨境业务全年段、多市场扩展。',
 						}
 					},
 					{
@@ -126,8 +132,10 @@
 						right:'C',
 						modal:{
 							title:'FBA SKU KYC P卡',
-							case1:'FBA：亚马逊自营的物流系统；SKU：即库存进出计量的单位；KYC：即对账户持有人的强化审查；P卡：是众多客户对Payoneer的昵称。',
-							case2:'',
+							case1:'FBA：亚马逊自营的物流系统；',
+							case2:'SKU：即库存进出计量的单位；',
+							case3:'KYC：即对账户持有人的强化审查；',
+							case4:'P卡：是众多客户对Payoneer的昵称。'
 						}
 					},
 					{
@@ -201,30 +209,20 @@
 				this.index = e.detail.current;
 			},
 			nextQuestion(){
+				this.show = false;
 				this.chooice = '';
 				this.current += 1;
-				this.show = false;
-				switch (this.current){
-					case 1:
-						this.currentName = '二'
-						break;
-					case 2:
-						this.currentName = '三'
-						break;
-					case 3:
-						this.currentName = '四'
-						break;
-					case 4:
-						this.currentName = '五'
-						break;
-				}
 			},
 			light(){
 				this.http.post('Subject/submitRightCount',{
 					openid:uni.getStorageSync('openid'),
-					right_count:this.count
+					right_count:this.count/* ,
+					inviter_id:uni.getStorageSync('inviter_id'),
+					from:uni.getStorageSync('from') */
 				}).then(res=>{
 					if(res.code == 1000){
+						uni.setStorageSync('has_answer',1);
+						uni.setStorageSync('right_count',this.count)
 						if(this.count == 4||this.count == 5){
 							uni.redirectTo({url: 'ten?count='+this.count});
 						}else if(this.count == 1||this.count == 2||this.count == 3){
@@ -246,9 +244,20 @@
 		display: flex;
 		flex-direction: column;
 		/* align-items: center; */
-		padding: 161rpx 75rpx 76rpx;
+		padding: 101rpx 75rpx 76rpx;
 		background-image: url(../../static/bg05_2.gif);
 		background-size: 100% 100%;
+	}
+	.head_title{
+		color: #333333;
+		font-size: 42rpx;
+		padding: 15rpx;
+		border-radius: 15rpx;
+		background-color: rgba(255,255,255,0.8);
+		min-width: 300rpx;
+		margin: 0 auto 40rpx;
+		font-weight: bold;
+		text-align: center;
 	}
 	.title{
 		font-size: 50rpx;

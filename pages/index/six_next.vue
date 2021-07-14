@@ -1,13 +1,14 @@
 <template>
 	<view class="content" :style="'min-height:' + this.$u.sys().windowHeight+'px;'">
 		<view class="u-text-center heavy" style="margin-top: 58rpx;font-size: 55rpx;">恭喜您</view>
-		<view class="u-text-center bold" style="margin-top: 42rpx;line-height: 1.7;font-size: 40rpx;">获得25美金优惠注册奖励 以及 二等奖抽奖名额</view>
+		<view class="u-text-center bold" style="margin-top: 42rpx;line-height: 1.7;font-size: 40rpx;">获得25美金优惠注册奖励 以及 </view>
+		<view class="u-text-center bold" style="line-height: 1.7;font-size: 40rpx;">二等奖抽奖名额</view>
 		
 		<view class="u-text-center medium" style="line-height: 1.7;font-size: 30rpx;margin-top: 32rpx;">点击“立即领取”</view>
 		<view class="u-text-center medium" style="line-height: 1.7;font-size: 30rpx;">填写资料并参与抽奖，并获得优惠注册链接</view>
 		
 		<view class="u-text-center bold" style="line-height: 1.7;font-size: 40rpx;margin-top: 140rpx;">分享H5更有机会赢取</view>
-		<view class="u-text-center bold" style="line-height: 1.7;font-size: 40rpx;margin-bottom: auto;">限量版Payoneer纳斯达克上市礼盒</view>
+		<view class="u-text-center bold" style="line-height: 1.7;font-size: 38rpx;margin-bottom: auto;">限量版Payoneer纳斯达克上市礼盒</view>
 		<!-- <view class="u-text-center bold" style="line-height: 1.7;font-size: 40rpx;margin-bottom: auto;">邀请更多朋友参与就可提高中奖概率！</view> -->
 		
 		<!-- <view class="u-text-center regular" style="line-height: 1.7;font-size: 30rpx;margin-top: 157rpx;color: #FFA800;">*中奖名额随机抽取，礼物限量50份</view>

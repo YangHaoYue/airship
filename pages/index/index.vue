@@ -38,19 +38,34 @@
 <script>
 	export default {
 		onLoad(e) {
-			this.inviter_id = e.inviter_id
+			let debug = e.debug || this.GetQueryString("debug");
+			if(debug == 1){
+				uni.clearStorage();
+			}
+			let from = e.from;
+			let inviter_id = e.inviter_id;
+			if(inviter_id){
+				uni.setStorageSync('inviter_id',inviter_id);
+			}
+			if(from){
+				uni.setStorageSync('from',from);
+			}
+			/* this.inviter_id = e.inviter_id */
 		},
-		onShow() {
+		onShow(e) {
+			console.log(e);
 			uni.preloadPage({url: "/pages/index/ten_next"});
 			uni.preloadPage({url: "/pages/index/six_next"});
 			uni.preloadPage({url: "/pages/index/zero_next"});
 			uni.preloadPage({url: "/pages/index/chooseAirship"});
 			this.getActRule();
-			let code=this.GetQueryString("openid");
-			let has_answer = this.GetQueryString('has_answer');
-			let right_count = this.GetQueryString('right_count');
-			if(code == null){
-				/* this.getOpenid(); */
+			let code = uni.getStorageSync('openid') /* || this.GetQueryString("openid"); */
+			let has_answer = uni.getStorageSync('has_answer') || this.GetQueryString('has_answer');
+			let right_count = uni.getStorageSync('right_count') || this.GetQueryString('right_count');
+			
+			console.log(code);
+			if(code == null||code == ''){
+				this.getOpenid();
 			}else if(has_answer == 1){
 				if(right_count == 4||right_count == 5){
 					uni.redirectTo({url: 'ten_next'});
@@ -92,7 +107,17 @@
 		},
 		methods: {
 			getOpenid(){
-				window.location.href = this.http.interfaceUrl() +'auth/oauth'
+				let openid = this.randomString(24);
+				this.http.post('auth/upload',{
+					openid:openid,
+					inviter_id:uni.getStorageSync('inviter_id'),
+					from:uni.getStorageSync('from')
+				}).then(res=>{
+					if(res.code == 1000){
+						uni.setStorageSync('openid',openid)
+					}
+				})
+				/* window.location.href = this.http.interfaceUrl() +'auth/oauth' */
 			},
 			//
 			getActRule(){
@@ -115,6 +140,17 @@
 			     var r = window.location.search.substr(1).match(reg);
 			     if(r!=null)return  unescape(r[2]); return null;
 			},
+			//随机字符串
+			randomString(len) {
+			 　　len = len || 32;
+			 　　var $chars = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678';    /****默认去掉了容易混淆的字符oOLl,9gq,Vv,Uu,I1****/
+			 　　var maxPos = $chars.length;
+			 　　var pwd = '';
+			 　　for (let i = 0; i < len; i++) {
+			 　　　　pwd += $chars.charAt(Math.floor(Math.random() * maxPos));
+			 　　}
+			 　　return pwd;
+			 }
 		}
 	}
 </script>

@@ -8,7 +8,8 @@
 			<view class="heavy" style="font-size: 40rpx;line-height: 1.5;">成功获得Payoneer派安盈25美金</view>
 			<view class="heavy" style="font-size: 40rpx;line-height: 1.5;">优惠注册奖励</view> -->
 			
-			<view class="bold u-text-center" style="font-size: 30rpx;line-height: 1.5;margin-top: 43rpx;">复制下方链接，即可获得</view>
+			<view class="bold u-text-center" style="font-size: 30rpx;line-height: 1.5;margin-top: 43rpx;">复制下方链接，完成注册，即可获得</view>
+			<view class="bold" style="font-size: 30rpx;line-height: 1.5;">Payoneer派安盈25美金优惠奖励</view>
 			<view class="bold u-line-5 u-text-center" style="font-size: 30rpx;line-height: 1.5;width: 500rpx;margin-top: 30rpx;">{{data}}</view>
 			
 			<u-button class="u-m-t-30" style="margin: 0 auto;" type="warning" size="mini" @click="copy">点击复制</u-button>

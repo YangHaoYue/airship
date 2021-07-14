@@ -48,7 +48,7 @@
 					this.$refs.roket.play();
 				},500)
 				setTimeout(()=>{
-					uni.navigateTo({url: 'zero_next'});
+					uni.redirectTo({url: 'zero_next'});
 				},2500)
 			}
 		}

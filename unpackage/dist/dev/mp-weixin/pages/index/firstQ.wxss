@@ -1,0 +1,128 @@
+@charset "UTF-8";
+/**
+ * 下方引入的为uView UI的集成样式文件，为scss预处理器，其中包含了一些"u-"开头的自定义变量
+ * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
+ */
+.content.data-v-f67b9d12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  /* align-items: center; */
+  padding: 161rpx 75rpx 76rpx;
+  background-image: url(/static/bg05_2.gif);
+  background-size: 100% 100%;
+}
+.title.data-v-f67b9d12 {
+  font-size: 50rpx;
+  color: #FFFEFE;
+  margin-left: 5rpx;
+}
+.card.data-v-f67b9d12 {
+  width: 581rpx;
+  height: 100rpx;
+  border-radius: 12rpx;
+  margin-bottom: 37rpx;
+  background-color: #FFFFFF;
+  color: #333333;
+}
+.right.data-v-f67b9d12 {
+  background-color: #00CE8D;
+  color: #FFFFFF;
+}
+.wrong.data-v-f67b9d12 {
+  background-color: #FF3232;
+  color: #FFFFFF;
+}
+.center.data-v-f67b9d12 {
+  margin: 88rpx auto auto;
+}
+.text-gray.data-v-f67b9d12 {
+  color: #666666;
+}
+.photoCard.data-v-f67b9d12 {
+  border-radius: 12rpx;
+  background-color: #FFFFFF;
+  width: 581rpx;
+  height: 611rpx;
+  padding: 35rpx 28rpx 23rpx 32rpx;
+}
+.photoCard .screen-swiper.data-v-f67b9d12 {
+  height: 501rpx;
+}
+.photoCard .imgChooice.data-v-f67b9d12 {
+  -webkit-transform: translateY(25rpx);
+          transform: translateY(25rpx);
+}
+.photoCard .idot.data-v-f67b9d12 {
+  border-radius: 5000rpx;
+  height: 30rpx;
+  width: 30rpx;
+}
+.photoCard .selected.data-v-f67b9d12 {
+  background-color: #FF4900;
+}
+.photoCard .nomal.data-v-f67b9d12 {
+  background-color: #E0E0E0;
+}
+.popup.data-v-f67b9d12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  justify-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  line-height: 1;
+  padding-top: 9rpx;
+}
+.popup .head.data-v-f67b9d12 {
+  width: 100%;
+}
+.popup .head .img1.data-v-f67b9d12 {
+  width: 113rpx;
+  height: 117rpx;
+}
+.popup .head .close.data-v-f67b9d12 {
+  width: 30rpx;
+  height: 30rpx;
+  margin: 21rpx 31rpx 0 30rpx;
+}
+.btn.data-v-f67b9d12 {
+  border-radius: 5000rpx;
+  width: 411.3rpx;
+  height: 112.5rpx;
+  background-color: #FF4900;
+  color: #FFFFFF;
+  font-size: 35rpx;
+  margin: 91rpx auto 0;
+  min-height: 112rpx;
+  position: fixed;
+  bottom: 67rpx;
+  z-index: 10075;
+  left: 0;
+  right: 0;
+}
+.btn_colorful.data-v-f67b9d12 {
+  border-radius: 5000rpx;
+  width: 411.3rpx;
+  height: 112.5rpx;
+  background: -webkit-linear-gradient(left, #FF331B, #ECC400);
+  color: #FFFFFF;
+  font-size: 35rpx;
+  margin: 0 auto;
+  min-height: 112rpx;
+  z-index: 10075;
+  position: fixed;
+  bottom: 67rpx;
+  left: 0;
+  right: 0;
+}
+

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "Payoneer",
+  "usingComponents": {
+    "tui-round-progress": "/components/tui-round-progress/tui-round-progress"
+  }
+}

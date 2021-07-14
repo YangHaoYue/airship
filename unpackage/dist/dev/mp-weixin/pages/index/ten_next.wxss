@@ -1,0 +1,75 @@
+@charset "UTF-8";
+/**
+ * 下方引入的为uView UI的集成样式文件，为scss预处理器，其中包含了一些"u-"开头的自定义变量
+ * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
+ */
+.content.data-v-3f618a2b {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  /* align-items: center; */
+  padding: 126rpx 77rpx 107rpx 69rpx;
+  background-image: url(/static/bg1.jpg);
+  background-size: 100% 100%;
+  color: #FFFFFF;
+  font-size: 35rpx;
+}
+.btn_colorful.data-v-3f618a2b {
+  border-radius: 5000rpx;
+  width: 411.3rpx;
+  height: 112.5rpx;
+  background: -webkit-linear-gradient(left, #FF331B, #ECC400);
+  color: #FFFFFF;
+  font-size: 35rpx;
+  margin: 0 auto;
+}
+.btn_gromp.data-v-3f618a2b {
+  margin-top: 183rpx;
+  line-height: 1;
+}
+.btn_gromp .btn1.data-v-3f618a2b {
+  width: 292rpx;
+  height: 112rpx;
+  background-color: #FF4900;
+  font-size: 35rpx;
+  border-radius: 5000rpx;
+}
+.btn_gromp .btn2.data-v-3f618a2b {
+  width: 292rpx;
+  height: 112rpx;
+  background-color: #00A944;
+  font-size: 35rpx;
+  border-radius: 5000rpx;
+}
+.popup.data-v-3f618a2b {
+  padding: 24rpx 25rpx 22rpx 23rpx;
+}
+.popup image.data-v-3f618a2b {
+  width: 562rpx;
+  height: 860rpx;
+}
+.popup .footer.data-v-3f618a2b {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  justify-items: center;
+  width: 100%;
+}
+.popup .footer .btn.data-v-3f618a2b {
+  width: 331rpx;
+  height: 80rpx;
+  border-radius: 5000rpx;
+  border: 1rpx solid #666666;
+  color: #333333;
+  font-size: 25rpx;
+  margin: 15rpx auto 12rpx;
+  background-color: #FFFFFF;
+}
+

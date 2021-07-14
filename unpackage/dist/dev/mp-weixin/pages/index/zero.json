@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "tui-round-progress": "/components/tui-round-progress/tui-round-progress",
+    "gal-css-animate": "/static/GAL/components/gal-css-animate",
+    "gal-sloading": "/static/GAL/components/gal-sloading"
+  }
+}

@@ -1,0 +1,1 @@
+<view class="{{['data-v-4e841c7a',playing?animateName:'']}}" style="{{'animation-duration:'+(duration)+';'+('animation-timing-function:'+(timingFunction)+';')+('animation-fill-mode:'+(fillMode)+';')+('animation-delay:'+(delay)+';')+('animation-iteration-count:'+(iterationCount)+';')}}"><slot></slot></view>

@@ -9,11 +9,11 @@
 const tui = {
 	//接口地址
 	interfaceUrl: function() {
-		return 'http://payoneer.0831.run/api/v1/'
+		return 'http://feichuan.yidaoit.com/api/v1/'
 	},
 	//资源地址
 	resourceUrl:function(){
-		return 'http://payoneer.0831.run/'
+		return 'http://feichuan.yidaoit.com/'
 	},
 	toast: function(text, duration, success) {
 		uni.showToast({
@@ -99,7 +99,7 @@ const tui = {
 				url: tui.interfaceUrl() + url,
 				data: postData,
 				header: {
-					'content-type': isForm ? 'application/x-www-form-urlencoded' : 'application/json',
+					/* 'content-type': isForm ? 'application/x-www-form-urlencoded' : 'application/json', */
 					'Authorization':'Bearer '+ tui.getToken()
 				},
 				method: method, //'GET','POST'

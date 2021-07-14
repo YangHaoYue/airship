@@ -9,14 +9,14 @@
 			<!-- <view class="heavy" style="font-size: 35rpx;line-height: 1.5;">密切关注Payoneer派安盈微信公众号，</view>
 			<view class="heavy" style="font-size: 35rpx;line-height: 1.5;">第一时间获取得奖信息哦！</view> -->
 			
-			<view class="bold" style="font-size: 30rpx;line-height: 1.5;margin-top: 43rpx;">复制下方链接，即可获得</view>
+			<view class="bold" style="font-size: 30rpx;line-height: 1.5;margin-top: 43rpx;">复制下方链接，完成注册，即可获得</view>
 			<view class="bold" style="font-size: 30rpx;line-height: 1.5;">Payoneer派安盈25美金优惠奖励</view>
 			<view class="bold u-line-5 u-text-center" style="font-size: 30rpx;line-height: 1.5;margin-top: 30rpx;">{{data}}</view>
 			
 			<u-button class="u-m-t-30" type="warning" size="mini" @click="copy">点击复制</u-button>
 			
 			<view class="bold" style="font-size: 30rpx;margin-top: 58rpx;line-height: 1.3;">返回H5点击“分享赢取大礼” ，</view>
-			<view class="bold" style="font-size: 30rpx;line-height: 1.3;margin-top: 20rpx;">更有机会赢取更多礼品并提高中奖几率哦。</view>
+			<view class="bold" style="font-size: 30rpx;line-height: 1.3;margin-top: 20rpx;">更有机会赢取更多礼品。</view>
 			
 			<!-- <view class="u-flex u-row-center">
 				<image src="../../static/anniu_bg@2x.png" mode="aspectFit" style="width: 311rpx;height: 311rpx;margin: 33rpx auto;"></image>

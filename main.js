@@ -4,6 +4,9 @@ import App from './App'
 import tuiRoundProgress from './components/tui-round-progress/tui-round-progress.vue'
 Vue.component('tui-round-progress',tuiRoundProgress)
 
+import tuiCircularProgress from './components/tui-circular-progress/tui-circular-progress.vue'
+Vue.component('tui-circular-progress',tuiCircularProgress)
+
 import http from './common/httpRequest'
 Vue.prototype.http = http
 

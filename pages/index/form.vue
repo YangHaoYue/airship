@@ -26,9 +26,9 @@
 			<view class="u-font-28 medium" style="color: #9A9A9A;">跨境月销售额</view>
 		</view>
 		<block v-for="(item,index) in sell_amount_opt" :key="'money'+index">
-		 	<view class="form-item u-flex bg-white u-row-between" @click="changMoney(index)">
+		 	<view class="form-item u-flex bg-white u-row-between" @click="changMoney(item.id)">
 		 		<view class="u-font-28 medium" style="color: #333333;width: 200rpx;">{{item.val}}</view>
-				<image src="../../static/anniu_duihao@2x.png" mode="aspectFit" style="width: 46rpx;height: 38rpx;" v-if="compare(chooiceMoney,index)"></image>
+				<image src="../../static/anniu_duihao@2x.png" mode="aspectFit" style="width: 46rpx;height: 38rpx;" v-if="compare(chooiceMoney,item.id)"></image>
 		 	</view>
 		</block>
 		
@@ -36,8 +36,8 @@
 			<view class="u-font-28 medium" style="color: #9A9A9A;">对哪一个平台感兴趣</view>
 		</view>
 		<block v-for="(son,j) in plat_opt" :key="'position'+j">
-		 	<view class="form-item u-flex bg-white" @click="changPosition(j)">
-				<image src="../../static/xuan01@2x.png" mode="aspectFit" style="width: 43rpx;height: 45rpx;margin: 1rpx 2rpx;" v-if="compare(chooicePosition,j)"></image>
+		 	<view class="form-item u-flex bg-white" @click="changPosition(son.id)">
+				<image src="../../static/xuan01@2x.png" mode="aspectFit" style="width: 43rpx;height: 45rpx;margin: 1rpx 2rpx;" v-if="compare(chooicePosition,son.id)"></image>
 				<image src="../../static/circle.png" mode="aspectFit" style="width: 47rpx;height: 47rpx;" v-else></image>
 		 		<view class="u-font-28 medium" style="color: #333333;margin-left: 39rpx;">{{son.val}}</view>
 		 	</view>
@@ -49,9 +49,9 @@
 			<view class="u-font-28 medium" style="color: #9A9A9A;">City on</view>
 		</view>
 		<block v-for="(dad,i) in city_opt" :key="'city'+i">
-		 	<view class="form-item u-flex bg-white u-row-between" @click="changCity(i)">
+		 	<view class="form-item u-flex bg-white u-row-between" @click="changCity(dad.id)">
 		 		<view class="u-font-28 medium" style="color: #333333;">{{dad.val}}</view>
-				<image src="../../static/anniu_duihao@2x.png" mode="aspectFit" style="width: 46rpx;height: 38rpx;" v-if="compare(chooiceCity,i)"></image>
+				<image src="../../static/anniu_duihao@2x.png" mode="aspectFit" style="width: 46rpx;height: 38rpx;" v-if="compare(chooiceCity,dad.id)"></image>
 		 	</view>
 		</block>
 		
@@ -76,13 +76,13 @@
 				position:'',
 				tel_num:'',
 				
-				chooiceMoney:0,
+				chooiceMoney:'',
 				sell_amount_opt:[],
 				
-				chooicePosition:0,
+				chooicePosition:'',
 				plat_opt:[],
 				
-				chooiceCity:0,
+				chooiceCity:'',
 				city_opt:[]
 			}
 		},
@@ -97,14 +97,14 @@
 			compare(i,j){
 				return i == j
 			},
-			changMoney(index){
-				this.chooiceMoney = index;
+			changMoney(id){
+				this.chooiceMoney = id;
 			},
-			changCity(index){
-				this.chooiceCity = index;
+			changCity(id){
+				this.chooiceCity = id;
 			},
-			changPosition(index){
-				this.chooicePosition = index;
+			changPosition(id){
+				this.chooicePosition = id;
 			},
 			submit(){
 				this.http.post('Subject/userInfo',{
@@ -114,9 +114,9 @@
 					email:this.email,
 					real_name:this.real_name,
 					tel_num:this.tel_num,
-					sell_amount:this.sell_amount_opt.length>0&&this.sell_amount_opt[this.chooiceMoney].id||'',
-					plat:this.plat_opt.length>0&&this.plat_opt[this.chooicePosition].id||'',
-					city:this.city_opt.length>0&&this.city_opt[this.chooiceCity].id||'',
+					sell_amount:this.chooiceMoney,
+					plat:this.chooicePosition,
+					city:this.chooiceCity,
 				}).then(res=>{
 					this.$u.toast(res.msg)
 					if(res.code == 1000){

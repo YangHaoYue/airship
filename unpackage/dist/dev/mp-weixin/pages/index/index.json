@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "Payoneer",
+  "usingComponents": {
+    "u-popup": "/uview-ui/components/u-popup/u-popup",
+    "u-parse": "/uview-ui/components/u-parse/u-parse"
+  }
+}

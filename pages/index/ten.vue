@@ -1,14 +1,22 @@
 <template>
 	<view class="content" :style="'min-height:' + this.$u.sys().windowHeight+'px;'">
 		<block v-if="!show">
+			<view class="tui-progress-text" style="width: 500rpx;height: 500rpx;background-size: 100% 100%;" :style="'background-image: url('+circleImgGif+');'" v-show="showGif">
+				<view class="medium">厉害了!</view>
+				<view class="tui-progress-num regular">您共答对<text style="color: #00FF36;margin: 0 10rpx;">{{count}}</text>题</view>
+			</view>
+			<view class="tui-progress-text" style="width: 500rpx;height: 500rpx;background-size: 100% 100%;" :style="'background-image: url('+circleImgPng+');'" v-show="!showGif">
+				<view class="medium">厉害了!</view>
+				<view class="tui-progress-num regular">您共答对<text style="color: #00FF36;margin: 0 10rpx;">{{count}}</text>题</view>
+			</view>
 			<!-- <image src="../../static/ten.png" mode="aspectFit" style="width: 560rpx;height: 524rpx;"></image> -->
-			<tui-round-progress progressColor="#5400FF" gradualColor="#FF1400" :diam="diam"
+			<!-- <tui-round-progress progressColor="#5400FF" gradualColor="#FF1400" :diam="diam"
 			:lineWidth="30" :percentage="count*20" defaultColor="rgba(25,190,107,0.1)" :fontShow="false" lineCap="butt">
 				<view class="tui-progress-text">
 					<view class="medium">厉害了!</view>
 					<view class="tui-progress-num regular">您共答对<text style="color: #00FF36;margin: 0 10rpx;">{{count}}</text>题</view>
 				</view>
-			</tui-round-progress>
+			</tui-round-progress> -->
 			<view class="u-text-center heavy" style="margin-top: 58rpx;font-size: 45rpx;">您已点亮了<text style="font-size: 60rpx;color: #FFD800;margin: 0 15rpx;">{{count*20}}%</text>能量环！</view>
 			<view class="u-text-center medium" style="margin-top: 42rpx;line-height: 1.7;font-size: 35rpx;margin-bottom: auto;">点击“起飞”，即刻解锁跨境宝藏！</view>
 			<!-- <view class="u-text-center heavy" style="margin: 116rpx auto 41rpx auto;font-size: 45rpx;">{{shipName}}</view> -->
@@ -27,6 +35,13 @@
 		onLoad(e) {
 			uni.preloadPage({url: "/pages/index/ten_next"});
 			this.count = e.count
+			if(this.count == 4){
+				this.circleImgGif = '../../static/80.gif'
+				this.circleImgPng = '../../static/80.png'
+			}else if(this.count == 5){
+				this.circleImgGif = '../../static/100.gif'
+				this.circleImgPng = '../../static/100.png'
+			}
 			//px = rpx / 750 * wx.getSystemInfoSync().windowWidth
 			this.diam = 500/ 750 * this.$u.sys().windowWidth
 		},
@@ -34,12 +49,20 @@
 			setTimeout(()=>{
 				this.$refs.sloading.stop();
 			}, 200);
+			setTimeout(()=>{
+				this.showGif = false;
+			},950)
 		},
 		data() {
 			return {
 				diam:0,
 				count:4,
 				show:false,
+				
+				showGif:true,
+				circleImgGif:'../../static/4.gif',
+				circleImgPng:'../../static/4.png',
+				
 				shipName:uni.getStorageSync('shipName')
 			}
 		},
@@ -50,7 +73,7 @@
 					this.$refs.roket.play();
 				},500)
 				setTimeout(()=>{
-					uni.navigateTo({url: 'ten_next'});
+					uni.redirectTo({url: 'ten_next'});
 				},2500)
 			}
 		}
@@ -87,15 +110,10 @@
 		}
 	}
 	.tui-progress-text{
-		width: 100%;
-		height: 500rpx;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
-		position: absolute;
-		left: 0;
-		top: 0;
 		color: #FFFFFF;
 		font-size: 35rpx;
 	}
